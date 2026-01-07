@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../config.php';
+//for testing
 
-// ✅ Correct session check
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     header("Location: ../login.php");
     exit;
@@ -25,3 +25,4 @@ try {
 header("Location: studio_list.php");
 exit;
 ?>
+
